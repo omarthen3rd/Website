@@ -1,21 +1,5 @@
 <!DOCTYPE html>
 <html>
-
-<link rel="stylesheet" href="blueberry.css"/>
-<link rel="stylesheet" href="custom.css"/>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-<script src="jquery.blueberry.js"></script>
-<script>
-  $(window).load(function() {
-    $('.blueberry').blueberry();
-  });
-</script>
-
 <style type="text/css">
 
   .blueberry { 
@@ -29,14 +13,13 @@
 
 <body>
   <nav class="site-header sticky-top py-1">
-    <!-- nav bar buttons -->
     <div class="container d-flex flex-column flex-md-row justify-content-between">
         <a class="py-2" href="#">
-          <svg width="500px" height="500px" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <svg width="24" height="24" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
             <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
               <g id="logo">
                 <rect id="Rectangle" fill="currentColor" x="0" y="0" width="500" height="500" rx="180"></rect>
-                <path d="M262,238 L330.000005,238 L330.000005,237.967832 C330.664045,237.989223 331.330766,238 332.000005,238 C365.689373,238 393.000001,210.68937 393.000001,177 C393.000001,143.31063 365.689373,116 332.000005,116 C331.330766,116 330.664045,116.010777 330.000005,116.032168 L330.000005,91.0227984 C330.664832,91.0076269 331.331528,91 332.000005,91 C379.496491,91 418,129.503512 418,177 C418,208.13551 401.454143,235.406527 376.675481,250.5 C401.454143,265.593473 418,292.86449 418,324 C418,371.496488 379.496491,410 332.000005,410 C331.331528,410 330.664832,409.992373 330,409.977201 L330.000005,384.967832 C330.664045,384.989223 331.330766,385 332.000005,385 C365.689373,385 393.000001,357.68937 393.000001,324 C393.000001,290.31063 365.689373,263 332.000005,263 C331.330766,263 330.664045,263.010777 330.000005,263.032168 L330.000005,263 L262,263 L262,360 L237,360 L237,263 L168.999995,263 L168.999995,263.032168 C168.335955,263.010777 167.669234,263 166.999995,263 C133.310627,263 105.999999,290.31063 105.999999,324 C105.999999,357.68937 133.310627,385 166.999995,385 C167.669234,385 168.335955,384.989223 168.999995,384.967832 L168.999995,409.977202 C168.335168,409.992373 167.668472,410 166.999995,410 C119.503509,410 81,371.496488 81,324 C81,292.86449 97.5458569,265.593473 122.324519,250.5 C97.5458569,235.406527 81,208.13551 81,177 C81,129.503512 119.503509,91 166.999995,91 C167.668472,91 168.335168,91.0076269 169,91.0227986 L168.999995,116.032168 C168.335955,116.010777 167.669234,116 166.999995,116 C133.310627,116 105.999999,143.31063 105.999999,177 C105.999999,210.68937 133.310627,238 166.999995,238 C167.669234,238 168.335955,237.989223 168.999995,237.967832 L168.999995,238 L237,238 L237,140 L262,140 L262,238 Z" id="Combined-Shape" fill="currentColor" fill-rule="nonzero"></path>
+                <path d="M262,238 L330.000005,238 L330.000005,237.967832 C330.664045,237.989223 331.330766,238 332.000005,238 C365.689373,238 393.000001,210.68937 393.000001,177 C393.000001,143.31063 365.689373,116 332.000005,116 C331.330766,116 330.664045,116.010777 330.000005,116.032168 L330.000005,91.0227984 C330.664832,91.0076269 331.331528,91 332.000005,91 C379.496491,91 418,129.503512 418,177 C418,208.13551 401.454143,235.406527 376.675481,250.5 C401.454143,265.593473 418,292.86449 418,324 C418,371.496488 379.496491,410 332.000005,410 C331.331528,410 330.664832,409.992373 330,409.977201 L330.000005,384.967832 C330.664045,384.989223 331.330766,385 332.000005,385 C365.689373,385 393.000001,357.68937 393.000001,324 C393.000001,290.31063 365.689373,263 332.000005,263 C331.330766,263 330.664045,263.010777 330.000005,263.032168 L330.000005,263 L262,263 L262,360 L237,360 L237,263 L168.999995,263 L168.999995,263.032168 C168.335955,263.010777 167.669234,263 166.999995,263 C133.310627,263 105.999999,290.31063 105.999999,324 C105.999999,357.68937 133.310627,385 166.999995,385 C167.669234,385 168.335955,384.989223 168.999995,384.967832 L168.999995,409.977202 C168.335168,409.992373 167.668472,410 166.999995,410 C119.503509,410 81,371.496488 81,324 C81,292.86449 97.5458569,265.593473 122.324519,250.5 C97.5458569,235.406527 81,208.13551 81,177 C81,129.503512 119.503509,91 166.999995,91 C167.668472,91 168.335168,91.0076269 169,91.0227986 L168.999995,116.032168 C168.335955,116.010777 167.669234,116 166.999995,116 C133.310627,116 105.999999,143.31063 105.999999,177 C105.999999,210.68937 133.310627,238 166.999995,238 C167.669234,238 168.335955,237.989223 168.999995,237.967832 L168.999995,238 L237,238 L237,140 L262,140 L262,238 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
               </g>
             </g>
           </svg>
@@ -50,21 +33,84 @@
           </svg>
         </a>
       </div>
-    <!-- shopping cart button -->
   </nav>
-  <!-- image slides -->
-  <div class="blueberry">
-    <ul class="slides">
-      <li>
-        <img src="assets/1.png" />
-      </li>
-      <li>
-        <img src="assets/2.png" />
-      </li>
-      <li>
-        <img src="assets/3.png" />
-      </li>
-    </ul>
+
+<!-- TO FIX:
+  <div class="gallery autoplay items-3 p-3">
+    <div id="item-1" class="control-operator"></div>
+    <div id="item-2" class="control-operator"></div>
+    <div id="item-3" class="control-operator"></div>
+    <figure class="item">
+      <img src="assets/1.png">
+    </figure>
+    <figure class="item">
+      <h1>Item 2</h1>
+    </figure>
+    <figure class="item">
+      <h1>Item 3</h1>
+    </figure>
+    <div class="controls"> <a href="#item-1" class="control-button">I</a> <a href="#item-2" class="control-button">I</a> <a href="#item-3" class="control-button">I</a> </div>
   </div>
+-->
+
+  <div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
+    <div class="col-md-5 p-lg-5 mx-auto my-5">
+      <h1 class="display-4 font-weight-normal">coming soon</h1>
+      <p class="lead font-weight-normal">the interactive content slider is causing some issues. please hold a little while longer.</p>
+    </div>
+  </div>
+
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
+      <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="my-3 py-3">
+          <h2 class="display-5">Overview</h2>
+          <p class="lead">Subheading.</p>
+        </div>
+        <div class="bg-light box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 30px 30px 0 0;"></div>
+      </div>
+      <div class="bg-light mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+        <div class="my-3 p-3">
+          <h2 class="display-5">JA Element</h2>
+          <p class="lead">Subheading.</p>
+        </div>
+        <div class="bg-dark box-shadow mx-auto" style="width: 80%; height: 300px; border-radius: 30px 30px 0 0;"></div>
+      </div>
+    </div>
+
+    <footer class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md">
+          <svg width="24" height="24" viewBox="0 0 500 500" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="logo">
+                <rect id="Rectangle" fill="currentColor" x="0" y="0" width="500" height="500" rx="180"></rect>
+                <path d="M262,238 L330.000005,238 L330.000005,237.967832 C330.664045,237.989223 331.330766,238 332.000005,238 C365.689373,238 393.000001,210.68937 393.000001,177 C393.000001,143.31063 365.689373,116 332.000005,116 C331.330766,116 330.664045,116.010777 330.000005,116.032168 L330.000005,91.0227984 C330.664832,91.0076269 331.331528,91 332.000005,91 C379.496491,91 418,129.503512 418,177 C418,208.13551 401.454143,235.406527 376.675481,250.5 C401.454143,265.593473 418,292.86449 418,324 C418,371.496488 379.496491,410 332.000005,410 C331.331528,410 330.664832,409.992373 330,409.977201 L330.000005,384.967832 C330.664045,384.989223 331.330766,385 332.000005,385 C365.689373,385 393.000001,357.68937 393.000001,324 C393.000001,290.31063 365.689373,263 332.000005,263 C331.330766,263 330.664045,263.010777 330.000005,263.032168 L330.000005,263 L262,263 L262,360 L237,360 L237,263 L168.999995,263 L168.999995,263.032168 C168.335955,263.010777 167.669234,263 166.999995,263 C133.310627,263 105.999999,290.31063 105.999999,324 C105.999999,357.68937 133.310627,385 166.999995,385 C167.669234,385 168.335955,384.989223 168.999995,384.967832 L168.999995,409.977202 C168.335168,409.992373 167.668472,410 166.999995,410 C119.503509,410 81,371.496488 81,324 C81,292.86449 97.5458569,265.593473 122.324519,250.5 C97.5458569,235.406527 81,208.13551 81,177 C81,129.503512 119.503509,91 166.999995,91 C167.668472,91 168.335168,91.0076269 169,91.0227986 L168.999995,116.032168 C168.335955,116.010777 167.669234,116 166.999995,116 C133.310627,116 105.999999,143.31063 105.999999,177 C105.999999,210.68937 133.310627,238 166.999995,238 C167.669234,238 168.335955,237.989223 168.999995,237.967832 L168.999995,238 L237,238 L237,140 L262,140 L262,238 Z" id="Combined-Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+              </g>
+            </g>
+          </svg>
+          <small class="d-block mb-3 text-muted">&copy; 2017-2018</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">infoeplusthree@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
 </body>
+
+<link rel="stylesheet" href="gallery.css">
+<link rel="stylesheet" href="gallery.theme.css">
+<link rel="stylesheet" href="blueberry.css"/>
+<link rel="stylesheet" href="custom.css"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+
 </html>
