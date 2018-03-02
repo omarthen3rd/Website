@@ -117,9 +117,9 @@ fieldset[disabled] .btn-purple.active {
 
 				<div class="col-6 col-md-4">
 					<div class="thumbnail">
-						<img src="assets/persons/masked/Ashan.png" style="width:80%" data-toggle="modal" data-target="#infoModal" data-team="Sales" data-name="Ashan" data-information="Nothing for Ashan yet">
+						<img src="assets/persons/masked/Ahsan.png" style="width:80%" data-toggle="modal" data-target="#infoModal" data-team="Sales" data-name="Ahsan" data-information="Nothing for Ahsan yet">
 						<div class="caption">
-							<p><b>Ashan Choudhary</b><br>VP of Sales</p>
+							<p><b>Ahsan Choudhary</b><br>VP of Sales</p>
 						</div>
 					</div>
 				</div>
@@ -159,7 +159,6 @@ fieldset[disabled] .btn-purple.active {
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
-			<br>
 			<div class="container-fluid">
 				<div class="row justify-content-center">
 					<div class="col-md-3 order-md-1">
@@ -206,13 +205,19 @@ fieldset[disabled] .btn-purple.active {
   var modal = $(this)
   modal.find('.modal-title').text('More Information About ' + name)
   modal.find('.modal-body p').text(information)
-  if (team != "President") {
+  if (team == 'President') {
+    modal.find('.modal-body h5').hide() // hide team label if president modal is clicked
+    modal.find('.teamContainer').hide() // hide team names/images if president modal is clicked
+  } else if (team == 'Marketing') {
+  	modal.find('.modal-body h5').hide() // hide team label if president modal is clicked
+    modal.find('.teamContainer').hide() // hide team names/images if president modal is clicked
+  } else {
     // 
     modal.find('.modal-body h5').text('The ' + team + ' Team')
     switch (team) {
 
       case 'Finance':
-        names = ["Ali", "Name1", "Name2"]
+        names = ["Ali", "Thomas", "Romaan"]
         modal.find('#teamRows').empty() // for clearing table before adding new stuff
         for (i = 0; i < 3; i++) {
           name = names[i]
@@ -231,7 +236,7 @@ fieldset[disabled] .btn-purple.active {
             $('<div class="col-md-2 order-md-1">').html('<img width="100%" src="assets/persons/masked/HumanResources/0' + (i + 1) + '.png">' + '<br>' + '<p>' + name)
             )
         }
-        break;
+        break
 
       case 'Technology':
         names = ["Hamzah M.", "Hamzah N.", "Kaamil"]
@@ -242,7 +247,7 @@ fieldset[disabled] .btn-purple.active {
             $('<div class="col-md-2 order-md-1">').html('<img width="100%" src="assets/persons/masked/Technology/0' + (i + 1) + '.png">' + '<br>' + '<p>' + name)
             )
         }
-        break;
+        break
 
       case 'Sales':
         names = ["Ashair"]
@@ -253,7 +258,7 @@ fieldset[disabled] .btn-purple.active {
             $('<div class="col-md-2 order-md-1">').html('<img width="100%" src="assets/persons/masked/Sales/0' + (i + 1) + '.png">' + '<br>' + '<p>' + name)
             )
         }
-        break;
+        break
 
       case 'Production':
         names = ["Kerry", "Maha"]
@@ -264,20 +269,20 @@ fieldset[disabled] .btn-purple.active {
             $('<div class="col-md-2 order-md-1">').html('<img width="100%" src="assets/persons/masked/Production/0' + (i + 1) + '.png">' + '<br>' + '<p>' + name)
             )
         }
-        break;
+        break
 
       default:
+      	modal.find('.modal-body h5').hide() // hide team label if Marketing modal is clicked
+    	modal.find('.teamContainer').hide() // hide team names/images if Marketing modal is clicked
         modal.find('#teamRows').empty() // for clearing table before adding new stuff
-        break;
+        break
 
     }
     modal.find('.modal-body h5').show() // show team label if modal clicked is not president
     modal.find('.teamContainer').show() // show team names/images modal clicked is not president
-  } else if (team == 'President') {
-    modal.find('.modal-body h5').hide() // hide team label if president modal is clicked
-    modal.find('.teamContainer').hide() // hide team names/images if president modal is clicked
   }
-modal.find('#heroImage').attr('src', imageName) // sets one image to all images in modal
+
+modal.find('#heroImage').attr('src', imageName) // sets hero image at top of modal
 })
 </script>
 
