@@ -126,7 +126,7 @@ fieldset[disabled] .btn-purple.active {
 
 				<div class="col-6 col-md-4">
 					<div class="thumbnail">
-						<img src="assets/persons/masked/May.png" style="width:80%" data-toggle="modal" data-target="#infoModal" data-team="Human Resources"  data-name="May" data-information="Hi, my name is May Alsaigh and I am the Vice President of Human Resources at Element. I am in Grade 11 and currently attend John Cabot Catholic Secondary School. As part of the school, I am enrolled in a business program. Essentially, that is the main reason why I decided to join this team, my love for business must be fulfilled! My main role consists of managing people at the business. I also ensure everyone's well-being and satisfaction. This is no problem for me since I love working with people. I also love working with children! I am so pleased to work with such a kid-friendly company. From my volunteer experience at community centres and daycares, I have learned that kids enjoy playing games as this helps them learn best. That is why my team and I decided to create this company. As my position in Human Resources, I strongly believe that E + 3 can not only make a change in children's lives, but their parents as well. There is no better way to educate your kid than to bond with them through their passion for entertainment!">
+						<img src="assets/persons/masked/May.png" style="width:80%" onclick="pluto()" data-toggle="modal" data-target="#infoModal" data-team="Human Resources"  data-name="May" data-information="Hi, my name is May Alsaigh and I am the Vice President of Human Resources at Element. I am in Grade 11 and currently attend John Cabot Catholic Secondary School. As part of the school, I am enrolled in a business program. Essentially, that is the main reason why I decided to join this team, my love for business must be fulfilled! My main role consists of managing people at the business. I also ensure everyone's well-being and satisfaction. This is no problem for me since I love working with people. I also love working with children! I am so pleased to work with such a kid-friendly company. From my volunteer experience at community centres and daycares, I have learned that kids enjoy playing games as this helps them learn best. That is why my team and I decided to create this company. As my position in Human Resources, I strongly believe that E + 3 can not only make a change in children's lives, but their parents as well. There is no better way to educate your kid than to bond with them through their passion for entertainment!">
 						<div class="caption">
 							<p><b>May Alsaigh</b><br>VP of Human Resources</p>
 						</div>
@@ -188,12 +188,17 @@ fieldset[disabled] .btn-purple.active {
 	</div>
 </div>
 
-<script>
-	$('#infoModal').on('show.bs.modal', function (event) {
-  	var button = $(event.relatedTarget) // Button that triggered the modal
-  	var name = button.data('name') // Extract info from data-* attributes
-  	var information = button.data('information') // Extract info from data-* attributes
-  	var team = button.data('team') // Extract info from data-* attributes
+<!-- javascript code below won't work if scipts below are not included -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+  $('#infoModal').on('show.bs.modal', function (event) {
+  var button = $(event.relatedTarget) // Button that triggered the modal
+  var name = button.data('name') // Extract info from data-* attributes
+  var information = button.data('information') // Extract info from data-* attributes
+  var team = button.data('team') // Extract info from data-* attributes
   var imageName = 'assets/persons/masked/' + name + '.png'
   var names = []
   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
@@ -206,76 +211,74 @@ fieldset[disabled] .btn-purple.active {
     modal.find('.modal-body h5').text('The ' + team + ' Team')
     switch (team) {
 
-    	case 'Finance':
-    	names = ["Ali", "Name1", "Name2"]
+      case 'Finance':
+        names = ["Ali", "Name1", "Name2"]
         modal.find('#teamRows').empty() // for clearing table before adding new stuff
         for (i = 0; i < 3; i++) {
-        	name = names[i]
-        	modal.find('#teamRows').append(
-        		$('<div class="col-md-2 order-md-1">').html('<img width="100%" src="assets/persons/masked/Finance/0' + (i + 1) + '.png">' + '<br>' + '<p>' + name)
-        		)
+          name = names[i]
+          modal.find('#teamRows').append(
+            $('<div class="col-md-2 order-md-1">').html('<img width="100%" src="assets/persons/masked/Finance/0' + (i + 1) + '.png">' + '<br>' + '<p>' + name)
+            )
         }
         break;
 
-        case 'Human Resources':
+      case 'Human Resources':
         names = ["Lurean"]
         modal.find('#teamRows').empty() // for clearing table before adding new stuff
         for (i = 0; i < 1; i++) {
-        	name = names[i]
-        	modal.find('#teamRows').append(
-        		$('<div class="col-md-2 order-md-1">').html('<img width="100%" src="assets/persons/masked/HumanResources/0' + (i + 1) + '.png">' + '<br>' + '<p>' + name)
-        		)
+          name = names[i]
+          modal.find('#teamRows').append(
+            $('<div class="col-md-2 order-md-1">').html('<img width="100%" src="assets/persons/masked/HumanResources/0' + (i + 1) + '.png">' + '<br>' + '<p>' + name)
+            )
         }
         break;
 
-        case 'Technology':
+      case 'Technology':
         names = ["Hamzah M.", "Hamzah N.", "Kaamil"]
         modal.find('#teamRows').empty() // for clearing table before adding new stuff
         for (i = 0; i < 3; i++) {
-        	name = names[i]
-        	modal.find('#teamRows').append(
-        		$('<div class="col-md-2 order-md-1">').html('<img width="100%" src="assets/persons/masked/Technology/0' + (i + 1) + '.png">' + '<br>' + '<p>' + name)
-        		)
+          name = names[i]
+          modal.find('#teamRows').append(
+            $('<div class="col-md-2 order-md-1">').html('<img width="100%" src="assets/persons/masked/Technology/0' + (i + 1) + '.png">' + '<br>' + '<p>' + name)
+            )
         }
         break;
 
-        case 'Sales':
+      case 'Sales':
         names = ["Ashair"]
         modal.find('#teamRows').empty() // for clearing table before adding new stuff
         for (i = 0; i < 1; i++) {
-        	name = names[i]
-        	modal.find('#teamRows').append(
-        		$('<div class="col-md-2 order-md-1">').html('<img width="100%" src="assets/persons/masked/Sales/0' + (i + 1) + '.png">' + '<br>' + '<p>' + name)
-        		)
+          name = names[i]
+          modal.find('#teamRows').append(
+            $('<div class="col-md-2 order-md-1">').html('<img width="100%" src="assets/persons/masked/Sales/0' + (i + 1) + '.png">' + '<br>' + '<p>' + name)
+            )
         }
         break;
 
-        case 'Production':
+      case 'Production':
         names = ["Kerry", "Maha"]
         modal.find('#teamRows').empty() // for clearing table before adding new stuff
         for (i = 0; i < 2; i++) {
-        	name = names[i]
-        	modal.find('#teamRows').append(
-        		$('<div class="col-md-2 order-md-1">').html('<img width="100%" src="assets/persons/masked/Production/0' + (i + 1) + '.png">' + '<br>' + '<p>' + name)
-        		)
+          name = names[i]
+          modal.find('#teamRows').append(
+            $('<div class="col-md-2 order-md-1">').html('<img width="100%" src="assets/persons/masked/Production/0' + (i + 1) + '.png">' + '<br>' + '<p>' + name)
+            )
         }
         break;
 
-        default:
+      default:
         modal.find('#teamRows').empty() // for clearing table before adding new stuff
         break;
 
     }
     modal.find('.modal-body h5').show() // show team label if modal clicked is not president
     modal.find('.teamContainer').show() // show team names/images modal clicked is not president
-} else if (team == 'President') {
+  } else if (team == 'President') {
     modal.find('.modal-body h5').hide() // hide team label if president modal is clicked
     modal.find('.teamContainer').hide() // hide team names/images if president modal is clicked
-}
+  }
 modal.find('#heroImage').attr('src', imageName) // sets one image to all images in modal
 })
 </script>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 
 <?php include('footer.html'); ?>
