@@ -116,13 +116,14 @@ fieldset[disabled] .btn-purple.active {
     <div class="row justify-content-center">
       <div class="col-md-8 order-md-1">
         <hr class="mb-4">
+        <h2>The Executive Team</h2>
         <div class="row py-5 text-center">
 
           <div class="col-6 col-md-4">
             <div class="thumbnail">
-              <img src="assets/persons/masked/Michelle.png" style="width:80%" data-toggle="modal" data-target="#infoModal" data-team="Productions"  data-name="Michelle" data-information="Hi! I'm Michelle Pham, currently studying at John Cabot Secondary School. As VP of Production I try to find the best means, from materials to sourcing, to translate our company's vision into the best product possible. To me, there's a beauty in turning a blueprint into a reality. At my school, I've gotten to work with different suppliers to produce customized spiritwear for many clubs and teams. Outside of E+3 I love to volunteer, especially working with others. One of my favourite places to volunteer is at my church's Children's Liturgies. I love working with the children and helping to prepare the learning materials for the kids. There, we try to make learning as exciting as possible for the children, which is why I'm proud to be a member of the E+3 team. Alongside E+3 I aspire to help create a quality means for kids to learn in the most enjoyable way possible.">
+              <img src="assets/persons/masked/Michelle.png" style="width:80%" data-toggle="modal" data-target="#infoModal" data-team="Production"  data-name="Michelle" data-information="Hi! I'm Michelle Pham, currently studying at John Cabot Secondary School. As VP of Production I try to find the best means, from materials to sourcing, to translate our company's vision into the best product possible. To me, there's a beauty in turning a blueprint into a reality. At my school, I've gotten to work with different suppliers to produce customized spiritwear for many clubs and teams. Outside of E+3 I love to volunteer, especially working with others. One of my favourite places to volunteer is at my church's Children's Liturgies. I love working with the children and helping to prepare the learning materials for the kids. There, we try to make learning as exciting as possible for the children, which is why I'm proud to be a member of the E+3 team. Alongside E+3 I aspire to help create a quality means for kids to learn in the most enjoyable way possible.">
               <div class="caption">
-                <p><b>Michelle Pham</b><br>VP of Productions</p>
+                <p><b>Michelle Pham</b><br>VP of Production</p>
               </div>
             </div>
           </div>
@@ -216,54 +217,15 @@ fieldset[disabled] .btn-purple.active {
 
           <!-- people under VP -->
           <div class="teamContainer">
-            <div class="row justify-content-center text-center">
-            <div class="col-md-2 order-md-1">
-              <div class="thumbnail">
-                <img src="" style="width:100%">
-                <div class="caption">
-                  <p>name</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-2 order-md-1">
-              <div class="thumbnail">
-                <img src="" style="width:100%">
-                <div class="caption">
-                  <p>name</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-2 order-md-1">
-              <div class="thumbnail">
-                <img src="" style="width:100%">
-                <div class="caption">
-                  <p>name</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-2 order-md-1">
-              <div class="thumbnail">
-                <img src="" style="width:100%">
-                <div class="caption">
-                  <p>name</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-2 order-md-1">
-              <div class="thumbnail">
-                <img src="" style="width:100%">
-                <div class="caption">
-                  <p>name</p>
-                </div>
-              </div>
-            </div>
+            <div id="teamRows" class="row justify-content-center text-center">
+              <!-- rows added in jQuery -->
           </div>
-          </div>
-
         </div>
-        <br>
+
       </div>
+      <br>
     </div>
+  </div>
   </div>
 
 </body>
@@ -285,15 +247,77 @@ fieldset[disabled] .btn-purple.active {
   var information = button.data('information') // Extract info from data-* attributes
   var team = button.data('team') // Extract info from data-* attributes
   var imageName = 'assets/persons/masked/' + name + '.png'
+  var names = []
   // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
   // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
   var modal = $(this)
   modal.find('.modal-title').text('More Information About ' + name)
   modal.find('.modal-body p').text(information)
   if (team != "President") {
+    // 
     modal.find('.modal-body h5').text('The ' + team + ' Team')
-    modal.find('.caption').text('Name')
-    modal.find('.teamContainer img').attr('src', imageName)
+    switch (team) {
+
+      case 'Finance':
+        names = ["Ali", "Name1", "Name2"]
+        modal.find('#teamRows').empty() // for clearing table before adding new stuff
+        for (i = 0; i < 3; i++) {
+          name = names[i]
+          modal.find('#teamRows').append(
+            $('<div class="col-md-2 order-md-1">').html('<img width="100%" src="assets/persons/masked/Finance/0' + (i + 1) + '.png">' + '<br>' + '<p>' + name)
+            )
+        }
+        break;
+
+      case 'Human Resources':
+        names = ["Lurean"]
+        modal.find('#teamRows').empty() // for clearing table before adding new stuff
+        for (i = 0; i < 1; i++) {
+          name = names[i]
+          modal.find('#teamRows').append(
+            $('<div class="col-md-2 order-md-1">').html('<img width="100%" src="assets/persons/masked/HumanResources/0' + (i + 1) + '.png">' + '<br>' + '<p>' + name)
+            )
+        }
+        break;
+
+      case 'Technology':
+        names = ["Hamzah M.", "Hamzah N.", "Kaamil"]
+        modal.find('#teamRows').empty() // for clearing table before adding new stuff
+        for (i = 0; i < 3; i++) {
+          name = names[i]
+          modal.find('#teamRows').append(
+            $('<div class="col-md-2 order-md-1">').html('<img width="100%" src="assets/persons/masked/Technology/0' + (i + 1) + '.png">' + '<br>' + '<p>' + name)
+            )
+        }
+        break;
+
+      case 'Sales':
+        names = ["Ashair"]
+        modal.find('#teamRows').empty() // for clearing table before adding new stuff
+        for (i = 0; i < 1; i++) {
+          name = names[i]
+          modal.find('#teamRows').append(
+            $('<div class="col-md-2 order-md-1">').html('<img width="100%" src="assets/persons/masked/Sales/0' + (i + 1) + '.png">' + '<br>' + '<p>' + name)
+            )
+        }
+        break;
+
+      case 'Production':
+        names = ["Kerry", "Maha"]
+        modal.find('#teamRows').empty() // for clearing table before adding new stuff
+        for (i = 0; i < 2; i++) {
+          name = names[i]
+          modal.find('#teamRows').append(
+            $('<div class="col-md-2 order-md-1">').html('<img width="100%" src="assets/persons/masked/Production/0' + (i + 1) + '.png">' + '<br>' + '<p>' + name)
+            )
+        }
+        break;
+
+      default:
+        modal.find('#teamRows').empty() // for clearing table before adding new stuff
+        break;
+
+    }
     modal.find('.modal-body h5').show() // show team label if modal clicked is not president
     modal.find('.teamContainer').show() // show team names/images modal clicked is not president
   } else if (team == 'President') {
