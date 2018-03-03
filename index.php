@@ -1,29 +1,38 @@
 <?php include('header.html'); ?>
 
-<!-- TO FIX:
-  <div class="gallery autoplay items-3 p-3">
-    <div id="item-1" class="control-operator"></div>
-    <div id="item-2" class="control-operator"></div>
-    <div id="item-3" class="control-operator"></div>
-    <figure class="item">
-      <img src="assets/1.png">
-    </figure>
-    <figure class="item">
-      <h1>Item 2</h1>
-    </figure>
-    <figure class="item">
-      <h1>Item 3</h1>
-    </figure>
-    <div class="controls"> <a href="#item-1" class="control-button">I</a> <a href="#item-2" class="control-button">I</a> <a href="#item-3" class="control-button">I</a> </div>
-  </div>
--->
+<div class="row justify-content-center">
 
-<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-  <div class="col-md-5 p-lg-5 mx-auto my-5">
-    <h1 class="display-4 font-weight-normal">Boardgames</h1>
-    <p class="lead font-weight-normal">Subtitle</p>
+  <div class="col-sm-8" style="margin-top: 50px; margin-bottom: 50px;">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="assets/1.png" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="assets/2.png" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="assets/3.png" alt="Third slide">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
   </div>
+
 </div>
+
 
 <div class="d-md-flex flex-md-equal w-100 my-md-3 pl-md-3">
   <div class="bg-dark mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
